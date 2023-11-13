@@ -30,7 +30,12 @@ public class TextFieldTest extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new TextFieldTest();
+                try{
+                    TextFieldTest test = new TextFieldTest();
+                    test.setVisible(true);
+                } catch (Exception e ){
+                    e.printStackTrace(System.err);
+                }
             }
         });
     }
